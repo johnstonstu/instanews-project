@@ -18,14 +18,12 @@ $(function() {
         //   successful request
 
         var obj = data.results;
-        var i = 0;
 
-        while (i <= 12) {
+        for (i = 0; i <= 12; i++) {
           var abs = obj[i].abstract;
           var imgURL;
           if (obj[i].multimedia.length) {
             imgURL = obj[i].multimedia[0].url;
-            i++;
             $(".stories").append(
               `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
             );
