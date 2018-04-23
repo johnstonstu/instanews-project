@@ -35,6 +35,11 @@ footer {
 }
 .bottom {
   margin-top: 22vh;
+  color: #c2c2c2;
+}
+
+.stories img {
+  width: 100%;
 }
 
 /* for screen sizes bigger than mobile */

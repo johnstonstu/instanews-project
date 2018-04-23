@@ -18,16 +18,18 @@ $(function() {
         //   successful request
 
         var obj = data.results;
+        var i = 0;
 
-        for (i = 0; i <= 12; i++) {
-          console.log(data.results[i]);
-          var imgURL = data.results[i].multimedia[0].url;
-          var abs = data.results[i].abstract;
-          $(".stories").append(
-            `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
-          );
-          console.log(imgURL);
-          console.log(abs);
+        while (i <= 12) {
+          var abs = obj[i].abstract;
+          var imgURL;
+          if (obj[i].multimedia.length) {
+            imgURL = obj[i].multimedia[0].url;
+            i++;
+            $(".stories").append(
+              `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
+            );
+          }
         }
 
         console.log(data);
@@ -36,6 +38,8 @@ $(function() {
 
       .fail(function(err) {
         //   api request error
+
+        console.log("there has been an error!!!");
         throw err;
       })
       .always(function() {
