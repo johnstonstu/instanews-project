@@ -11,6 +11,32 @@ footer {
   color: #c2c2c2;
 }
 
+.black-bg {
+  background-color: black;
+}
+.centered {
+  text-align: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.big {
+  text-transform: uppercase;
+}
+.logo {
+  margin-top: 25vh;
+  margin-bottom: 3vh;
+}
+.selector {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.bottom {
+  margin-top: 22vh;
+}
+
 /* for screen sizes bigger than mobile */
 @media screen and (min-width: 600px) {
 }
