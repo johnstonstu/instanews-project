@@ -1,6 +1,7 @@
 $(function() {
   $("select").on("change", function() {
     // saves selected value from selector drop-down
+    $(".stories").empty();
     var selected = $(this).val();
     console.log(selected);
 
@@ -18,8 +19,19 @@ $(function() {
 
         var obj = data.results;
 
+        for (i = 0; i <= 12; i++) {
+          console.log(data.results[i]);
+          var imgURL = data.results[i].multimedia[0].url;
+          var abs = data.results[i].abstract;
+          $(".stories").append(
+            `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
+          );
+          console.log(imgURL);
+          console.log(abs);
+        }
+
         console.log(data);
-        console.log(obj);
+        // console.log(obj.slice(11));
       })
 
       .fail(function(err) {
