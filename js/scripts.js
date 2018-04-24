@@ -15,20 +15,18 @@ $(function() {
 
     $.ajax({ url: url, method: "GET" })
       .done(function(data) {
-        //   successful request
-
         var arr = data.results;
         var total = 0;
 
-        for (i = 0; i <= arr.length; i++) {
+        for (var i = 0; i <= arr.length; i++) {
           var abs = arr[i].abstract;
           var imgURL;
           if (arr[i].multimedia.length) {
             imgURL = arr[i].multimedia[4].url;
 
-            $(".stories").append(
-              `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
-            );
+            // $(".stories").append(
+            //   `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
+            // );
 
             total++;
             if (total == 12) {
