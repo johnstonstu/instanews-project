@@ -3,7 +3,7 @@ $(function() {
     // saves selected value from selector drop-down
     $(".stories").empty();
     var selected = $(this).val();
-    console.log(selected);
+    // console.log(selected);
 
     // Built by LucyBot. www.lucybot.com
     var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json";
@@ -29,24 +29,24 @@ $(function() {
             // );
 
             total++;
-            if (total == 12) {
+            if (total === 12) {
               break;
             }
           }
         }
 
-        console.log(data);
+        // console.log(data);
         // console.log(obj.slice(11));
       })
 
       .fail(function(err) {
         //   api request error
 
-        console.log("there has been an error!!!");
+        // console.log("there has been an error!!!");
         throw err;
       })
       .always(function() {
-        console.log("always runs");
+        // console.log("always runs");
       });
   });
 });
