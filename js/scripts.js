@@ -17,14 +17,14 @@ $(function() {
       .done(function(data) {
         //   successful request
 
-        var obj = data.results;
+        var arr = data.results;
         var total = 0;
 
-        for (i = 0; i <= obj.length; i++) {
-          var abs = obj[i].abstract;
+        for (i = 0; i <= arr.length; i++) {
+          var abs = arr[i].abstract;
           var imgURL;
-          if (obj[i].multimedia.length) {
-            imgURL = obj[i].multimedia[4].url;
+          if (arr[i].multimedia.length) {
+            imgURL = arr[i].multimedia[4].url;
 
             $(".stories").append(
               `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
