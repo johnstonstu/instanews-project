@@ -18,15 +18,22 @@ $(function() {
         //   successful request
 
         var obj = data.results;
+        var total = 0;
 
-        for (i = 0; i <= 12; i++) {
+        for (i = 0; i <= obj.length; i++) {
           var abs = obj[i].abstract;
           var imgURL;
           if (obj[i].multimedia.length) {
-            imgURL = obj[i].multimedia[0].url;
+            imgURL = obj[i].multimedia[4].url;
+
             $(".stories").append(
               `<li> <img src="${imgURL}"> <p>${abs}</p> </li>`
             );
+
+            total++;
+            if (total == 12) {
+              break;
+            }
           }
         }
 
