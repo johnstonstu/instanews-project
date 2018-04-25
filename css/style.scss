@@ -1,42 +1,47 @@
 //colors
 $white: #ffffff;
-$color_silver_sand_approx: #c2c2c2;
+$grey-color: #c2c2c2;
 $black: black;
 
 //fonts
-$font_0: Open Sans;
-$font_1: sans-serif;
+$font-family-default: Open Sans;
+$font-safe: sans-serif;
+$font-size-default: 16px;
+
+//constants
+$max-width: 600px;
+$full-width: 100%;
 
 * {
   box-sizing: border-box;
   outline: none;
 }
 html {
-  font-size: 16px;
+  font-size: $font-family-default;
   color: $white;
 }
 body {
-  font-family: $font_0, $font_1;
+  font-family: $font-family-default, $font-safe;
 }
 footer {
-  color: $color_silver_sand_approx;
+  color: $grey-color;
 }
 li {
   a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: $font-family-default;
     color: $white;
   }
   .imgBG {
     background-size: cover;
     display: flex;
     width: 100%;
-    max-width: 600px;
+    max-width: $max-width;
     height: 30vh;
   }
   p {
     text-decoration: none;
-    max-width: 600px;
+    max-width: $max-width;
     display: inline-block;
     text-align: center;
     font-size: 1.5rem;
@@ -64,7 +69,7 @@ li {
 }
 .bottom {
   margin-top: 22vh;
-  color: $color_silver_sand_approx;
+  color: $grey-color;
   margin-bottom: 18vh;
 }
 @media screen and(min-width: 600px) {
