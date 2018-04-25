@@ -1,16 +1,5 @@
-//colors
-$white: #ffffff;
-$grey-color: #c2c2c2;
-$black: black;
-
-//fonts
-$font-family-default: Open Sans;
-$font-safe: sans-serif;
-$font-size-default: 16px;
-
-//constants
-$max-width: 600px;
-$full-width: 100%;
+@import "partials/_mixins.scss";
+@import "partials/_variables.scss";
 
 * {
   box-sizing: border-box;
@@ -76,6 +65,24 @@ li {
   ul {
     columns: 3;
     column-gap: 0;
+  }
+  footer {
+    text-align: left;
+    margin-left: 2rem;
+  }
+  section {
+    display: inline-block;
+  }
+  li p {
+    font-size: 1rem;
+  }
+  .centered {
+    text-align: left;
+  }
+  .select {
+    position: absolute;
+    top: 33vh;
+    margin-left: 4rem;
   }
 }
 @media screen and(min-width: 1000px) {
