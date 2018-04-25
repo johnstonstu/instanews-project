@@ -1,0 +1,80 @@
+//colors
+$white: #ffffff;
+$color_silver_sand_approx: #c2c2c2;
+$black: black;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+html {
+  font-size: 16px;
+  color: $white;
+}
+body {
+  font-family: $font_0, $font_1;
+}
+footer {
+  color: $color_silver_sand_approx;
+}
+li {
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: $white;
+  }
+  .imgBG {
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    height: 30vh;
+  }
+  p {
+    text-decoration: none;
+    max-width: 600px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    background: $black;
+    opacity: 0.5;
+    margin-top: auto;
+  }
+}
+#selector {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.black-bg {
+  background-color: $black;
+}
+.centered {
+  text-align: center;
+}
+.big {
+  text-transform: uppercase;
+}
+.logo {
+  margin-top: 25vh;
+  margin-bottom: 3vh;
+}
+.bottom {
+  margin-top: 22vh;
+  color: $color_silver_sand_approx;
+  margin-bottom: 18vh;
+}
+@media screen and(min-width: 600px) {
+  ul {
+    columns: 3;
+    column-gap: 0;
+  }
+}
+@media screen and(min-width: 1000px) {
+  ul {
+    columns: 4;
+  }
+}

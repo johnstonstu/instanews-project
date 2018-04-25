@@ -2,7 +2,8 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   rename = require("gulp-rename"),
   browserSync = require("browser-sync"),
-  eslint = require("gulp-eslint");
+  eslint = require("gulp-eslint"),
+  babel = require("gulp-babel");
 
 gulp.task("lint", function() {
   return gulp
@@ -17,6 +18,11 @@ gulp.task(
   gulp.series("lint", function() {
     return gulp
       .src("./js/*.js")
+      .pipe(
+        babel({
+          presets: ["env"]
+        })
+      )
       .pipe(uglify())
       .pipe(rename({ extname: ".min.js" }))
       .pipe(gulp.dest("./build/js"));
