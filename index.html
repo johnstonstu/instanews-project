@@ -16,47 +16,50 @@
 
     <div class="centered">
 
-        <section>
-            <img class="logo" src="images/nyt-logo.svg" alt="NY Times Logo">
-        </section>
+        <header>
+            <section>
+                <img class="logo" src="images/nyt-logo.svg" alt="NY Times Logo">
+            </section>
 
-        <section class="select">
+            <section class="select">
 
-            <h3>Choose a section:</h3>
+                <h3>Choose a section:</h3>
 
-            <select id="selector" name="Options">
-                <option value="#" selected>Sections ...</option>
-                <option value="home">Home</option>
-                <option value="opinion">Opinion</option>
-                <option value="world">World</option>
-                <option value="national">National</option>
-                <option value="politics">Politics</option>
-                <option value="upshot">Upshot</option>
-                <option value="nyregion">NYregion</option>
-                <option value="business">Business</option>
-                <option value="technology">Technology</option>
-                <option value="science">Science</option>
-                <option value="health">Health</option>
-                <option value="sports">Sports</option>
-                <option value="art">Art</option>
-                <option value="books">Books</option>
-                <option value="movies">Movies</option>
-                <option value="theater">Theater</option>
-                <option value="sundayReview">SundayReview</option>
-                <option value="fashion">Fashion </option>
-                <option value="tmagazine">tMagazine</option>
-                <option value="food">Food</option>
-                <option value="travel">Travel</option>
-                <option value="magazine">Magazine</option>
-                <option value="realestate">Realestate</option>
-                <option value="automobiles">Automobiles</option>
-                <option value="obituaries">Obituaries</option>
-                <option value="insider">Insider</option>
-            </select>
-        </section>
+                <!-- dropdown selector -->
+                <select id="selector" name="Options">
+                    <option value="#" selected>Sections ...</option>
+                    <option value="home">Home</option>
+                    <option value="opinion">Opinion</option>
+                    <option value="world">World</option>
+                    <option value="national">National</option>
+                    <option value="politics">Politics</option>
+                    <option value="upshot">Upshot</option>
+                    <option value="nyregion">NYregion</option>
+                    <option value="business">Business</option>
+                    <option value="technology">Technology</option>
+                    <option value="science">Science</option>
+                    <option value="health">Health</option>
+                    <option value="sports">Sports</option>
+                    <option value="art">Art</option>
+                    <option value="books">Books</option>
+                    <option value="movies">Movies</option>
+                    <option value="theater">Theater</option>
+                    <option value="sundayReview">SundayReview</option>
+                    <option value="fashion">Fashion </option>
+                    <option value="tmagazine">tMagazine</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="magazine">Magazine</option>
+                    <option value="realestate">Realestate</option>
+                    <option value="automobiles">Automobiles</option>
+                    <option value="obituaries">Obituaries</option>
+                    <option value="insider">Insider</option>
+                </select>
+            </section>
+        </header>
 
 
-
+        <!-- skeleton format for list of stories, populated with .js -->
         <ul class="stories">
             <li>
                 <a href="#">
@@ -68,6 +71,11 @@
                 </a>
             </li>
         </ul>
+
+        <!-- placeholder for loading gif -->
+        <div class="loading">
+
+        </div>
 
     </div>
 

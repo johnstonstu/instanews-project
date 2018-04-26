@@ -1,6 +1,8 @@
 @import "partials/_mixins.scss";
 @import "partials/_variables.scss";
 
+//fonts and resets are in /css folder
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -15,6 +17,8 @@ body {
 footer {
   color: $grey-color;
 }
+
+//styling for stories added by .js
 li {
   a {
     text-decoration: none;
@@ -26,7 +30,7 @@ li {
     display: flex;
     width: 100%;
     max-width: $max-width;
-    height: 30vh;
+    height: 50vh;
   }
   p {
     text-decoration: none;
@@ -61,6 +65,8 @@ li {
   color: $grey-color;
   margin-bottom: 18vh;
 }
+
+// for tablets over 600px wide
 @media screen and(min-width: 600px) {
   ul {
     columns: 3;
@@ -85,6 +91,8 @@ li {
     margin-left: 4rem;
   }
 }
+
+// for desktops over 1000px wide
 @media screen and(min-width: 1000px) {
   ul {
     columns: 4;
