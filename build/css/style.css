@@ -103,7 +103,10 @@ li:hover p {
     margin-top: 25vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .centered {
     text-align: left; }
   .header--active {
@@ -118,4 +121,8 @@ li:hover p {
 @media screen and (min-width: 600px) and (min-width: 1000px) {
   ul {
     -webkit-columns: 4;
-            columns: 4; } }
+            columns: 4; }
+  .logoSelect {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left; } }
