@@ -28,58 +28,32 @@ $(function() {
     $.ajax({ url: url, method: "GET" })
       .done(function(data) {
         var arr = data.results;
-        var total = 0;
 
-        // console.log(arr);
-
-        // var parsedArr = arr.filter(arr => arr.multimedia.length > 0);
-
-        // console.log(arr);
-        // console.log(parsedArr);
-
+        // filters array to new parsed array which includes only objects with pictures
         var pasredArr = arr
           .filter(function(index) {
             return index.multimedia.length;
           })
           .slice(0, 12);
 
-        console.log(pasredArr);
-
         //loops through results array
-        for (var i = 0; i <= arr.length; i++) {
-          var abs = arr[i].abstract;
-          var imgURL;
-          var storyURL = arr[i].url;
+        for (var i = 0; i <= pasredArr.length; i++) {
+          var abs = pasredArr[i].abstract;
+          var imgURL = pasredArr[i].multimedia[4].url;
+          var storyURL = pasredArr[i].url;
 
-          var mArr = arr[i].multimedia;
-          // var pasredArr = mArr.filter(mArr => mArr.length > 0);
-
-          // console.log(mArr);
-          // console.log(pasredArr);
-
-          // adds only stories with images
-
-          //remove for .filert . splice
-          if (arr[i].multimedia.length) {
-            imgURL = arr[i].multimedia[4].url;
-
-            $(".stories").append(
-              '<li> <a href="' +
-                storyURL +
-                '"> <div class="imgBG" style="background-image: url(' +
-                imgURL +
-                ')"><p>' +
-                abs +
-                "</p></div></a></li>"
-            );
-
-            total++;
-
-            // breaks for loop when 12 articles wit pictures is reached
-            if (total === 12) {
-              break;
-            }
-          }
+          // adds stories to the page with link, picture and abstract
+          $(".stories").append(
+            '<li> <a href="' +
+              storyURL +
+              '"> <div class="imgBG" style="background-image: url(' +
+              imgURL +
+              ')"><p>' +
+              abs +
+              "</p></div></a></li>"
+          );
+          // clears the loading gif
+          $(".loading").empty();
         }
       })
 
