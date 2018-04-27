@@ -12,10 +12,16 @@ html {
   color: $white;
 }
 body {
+  // display: flex;
+  // flex-direction: column;
   font-family: $font-family-default, $font-safe;
+  height: 100vh;
 }
 footer {
   color: $grey-color;
+}
+h3 {
+  margin-top: 4vh;
 }
 
 //styling for stories added by .js
@@ -49,8 +55,17 @@ li {
   }
 }
 #selector {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+}
+
+.logoSelect {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+.logo {
+  margin-top: 15vh;
 }
 .black-bg {
   background-color: $black;
@@ -58,12 +73,8 @@ li {
 .centered {
   text-align: center;
 }
-.big {
+.upperCase {
   text-transform: uppercase;
-}
-.logo {
-  margin-top: 25vh;
-  margin-bottom: 3vh;
 }
 .bottom {
   margin-top: 22vh;
@@ -84,48 +95,55 @@ li {
   section {
     display: inline-block;
   }
+  h3 {
+    margin-top: 2vh;
+  }
   li p {
     font-size: 1rem;
+  }
+  #selector {
+    margin-top: 2vh;
+    margin-bottom: auto;
+  }
+  .logo {
+    margin-top: auto;
+  }
+  .logoSelect {
+    flex-direction: row;
+    margin-top: 25vh;
+    align-items: center;
+    // justify-content: center;
   }
   .centered {
     text-align: left;
   }
-  .select {
-    // position: absolute;
-    top: 30vh;
-    margin-left: 4rem;
-  }
+
   .header--active {
     background-color: black;
     width: auto;
     height: 17vh;
     margin: 0;
-
     .logo {
-      margin-top: 0;
       transform: scale(0.4);
-      transform: translate(100%, 0);
-    }
-    .select {
-      transform: scale(1);
-      transform: translate(200%, -100%);
     }
   }
 
   // for desktops over 1000px wide
   @media screen and(min-width: 1000px) {
+    body {
+    }
     ul {
       columns: 4;
     }
 
     .header--active {
-      .logo {
-        transform: scale(0.4);
-      }
-      .select {
-        transform: scale(1);
-        transform: translate(-10%, -100%);
-      }
+      // background-color: red;
+      // .logoSelect {
+      //   transform: translate(-100%, -100%);
+      // }
     }
+    // .centered {
+    //   text-align: left;
+    // }
   }
 }

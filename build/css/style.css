@@ -8,10 +8,14 @@ html {
   color: #ffffff; }
 
 body {
-  font-family: Open Sans, sans-serif; }
+  font-family: Open Sans, sans-serif;
+  height: 100vh; }
 
 footer {
   color: #c2c2c2; }
+
+h3 {
+  margin-top: 4vh; }
 
 li a {
   text-decoration: none;
@@ -41,8 +45,21 @@ li:hover p {
   opacity: 1; }
 
 #selector {
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
+  margin-top: 2vh;
+  margin-bottom: 10vh; }
+
+.logoSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: auto; }
+
+.logo {
+  margin-top: 15vh; }
 
 .black-bg {
   background-color: black; }
@@ -50,12 +67,8 @@ li:hover p {
 .centered {
   text-align: center; }
 
-.big {
+.upperCase {
   text-transform: uppercase; }
-
-.logo {
-  margin-top: 25vh;
-  margin-bottom: 3vh; }
 
 .bottom {
   margin-top: 22vh;
@@ -73,39 +86,36 @@ li:hover p {
     margin-left: 2rem; }
   section {
     display: inline-block; }
+  h3 {
+    margin-top: 2vh; }
   li p {
     font-size: 1rem; }
+  #selector {
+    margin-top: 2vh;
+    margin-bottom: auto; }
+  .logo {
+    margin-top: auto; }
+  .logoSelect {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 25vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .centered {
     text-align: left; }
-  .select {
-    top: 30vh;
-    margin-left: 4rem; }
   .header--active {
     background-color: black;
     width: auto;
     height: 17vh;
     margin: 0; }
     .header--active .logo {
-      margin-top: 0;
       -webkit-transform: scale(0.4);
-              transform: scale(0.4);
-      -webkit-transform: translate(100%, 0);
-              transform: translate(100%, 0); }
-    .header--active .select {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform: translate(200%, -100%);
-              transform: translate(200%, -100%); } }
+              transform: scale(0.4); } }
 
 @media screen and (min-width: 600px) and (min-width: 1000px) {
   ul {
     -webkit-columns: 4;
-            columns: 4; }
-  .header--active .logo {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4); }
-  .header--active .select {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform: translate(-10%, -100%);
-            transform: translate(-10%, -100%); } }
+            columns: 4; } }
