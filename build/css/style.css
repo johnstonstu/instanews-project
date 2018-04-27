@@ -37,6 +37,9 @@ li p {
   opacity: 0.5;
   margin-top: auto; }
 
+li:hover p {
+  opacity: 1; }
+
 #selector {
   margin-top: 5vh;
   margin-bottom: 5vh; }
@@ -75,11 +78,34 @@ li p {
   .centered {
     text-align: left; }
   .select {
-    position: absolute;
-    top: 33vh;
-    margin-left: 4rem; } }
+    top: 30vh;
+    margin-left: 4rem; }
+  .header--active {
+    background-color: black;
+    width: auto;
+    height: 17vh;
+    margin: 0; }
+    .header--active .logo {
+      margin-top: 0;
+      -webkit-transform: scale(0.4);
+              transform: scale(0.4);
+      -webkit-transform: translate(100%, 0);
+              transform: translate(100%, 0); }
+    .header--active .select {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform: translate(200%, -100%);
+              transform: translate(200%, -100%); } }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) and (min-width: 1000px) {
   ul {
     -webkit-columns: 4;
-            columns: 4; } }
+            columns: 4; }
+  .header--active .logo {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4); }
+  .header--active .select {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: translate(-10%, -100%);
+            transform: translate(-10%, -100%); } }

@@ -1,6 +1,7 @@
 $(function() {
   $("select").on("change", function() {
     // saves selected value from selector drop-down
+    $("header").addClass("header--active");
 
     //clears previous list
     $(".stories").empty();
@@ -25,7 +26,6 @@ $(function() {
       .done(function(data) {
         var arr = data.results;
         var total = 0;
-        console.log(arr);
 
         //loops through results array
         for (var i = 0; i <= arr.length; i++) {
