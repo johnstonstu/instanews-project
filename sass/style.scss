@@ -30,6 +30,11 @@ li {
     text-decoration: none;
     font-size: $font-family-default;
     color: $white;
+    &:hover {
+      p {
+        opacity: 0.6;
+      }
+    }
   }
   .imgBG {
     background-size: cover;
@@ -41,17 +46,12 @@ li {
   p {
     text-decoration: none;
     max-width: $max-width;
-    display: inline-block;
     text-align: center;
     font-size: 1.5rem;
     background: $black;
-    opacity: 0.5;
+    opacity: 0;
     margin-top: auto;
-  }
-  &:hover {
-    p {
-      opacity: 1;
-    }
+    transition-duration: 0.5s;
   }
 }
 #selector {
@@ -119,6 +119,7 @@ li {
   }
 
   .header--active {
+    transition-duration: 0.5s;
     background-color: black;
     width: auto;
     height: 17vh;

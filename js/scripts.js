@@ -1,12 +1,15 @@
 $(function() {
   $("select").on("change", function() {
     // saves selected value from selector drop-down
+
+    // active state for resizing header
     $("header").addClass("header--active");
 
     //clears previous list
     $(".stories").empty();
 
     //loading gif
+    $(".loading").empty();
     $(".loading").append(
       '<img alt="loader" src="../images/ajax-loader.gif" width="100" height="100" align="center" />'
     );
@@ -27,13 +30,36 @@ $(function() {
         var arr = data.results;
         var total = 0;
 
+        // console.log(arr);
+
+        // var parsedArr = arr.filter(arr => arr.multimedia.length > 0);
+
+        // console.log(arr);
+        // console.log(parsedArr);
+
+        var pasredArr = arr
+          .filter(function(index) {
+            return index.multimedia.length;
+          })
+          .slice(0, 12);
+
+        console.log(pasredArr);
+
         //loops through results array
         for (var i = 0; i <= arr.length; i++) {
           var abs = arr[i].abstract;
           var imgURL;
           var storyURL = arr[i].url;
 
+          var mArr = arr[i].multimedia;
+          // var pasredArr = mArr.filter(mArr => mArr.length > 0);
+
+          // console.log(mArr);
+          // console.log(pasredArr);
+
           // adds only stories with images
+
+          //remove for .filert . splice
           if (arr[i].multimedia.length) {
             imgURL = arr[i].multimedia[4].url;
 

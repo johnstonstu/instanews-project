@@ -21,6 +21,8 @@ li a {
   text-decoration: none;
   font-size: Open Sans;
   color: #ffffff; }
+  li a:hover p {
+    opacity: 0.6; }
 
 li .imgBG {
   background-size: cover;
@@ -34,15 +36,13 @@ li .imgBG {
 li p {
   text-decoration: none;
   max-width: 600px;
-  display: inline-block;
   text-align: center;
   font-size: 1.5rem;
   background: black;
-  opacity: 0.5;
-  margin-top: auto; }
-
-li:hover p {
-  opacity: 1; }
+  opacity: 0;
+  margin-top: auto;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
 
 #selector {
   margin-top: 2vh;
@@ -110,6 +110,8 @@ li:hover p {
   .centered {
     text-align: left; }
   .header--active {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
     background-color: black;
     width: auto;
     height: 17vh;
