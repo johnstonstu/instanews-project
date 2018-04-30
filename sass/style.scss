@@ -1,34 +1,38 @@
 @import "partials/_mixins.scss";
 @import "partials/_variables.scss";
-
-//fonts and resets are in /css folder
+//fonts, reset and selectric are in /css folder
 
 * {
   box-sizing: border-box;
   outline: none;
 }
 html {
-  font-size: $font-family-default;
+  font-size: $font-size-default;
   color: $white;
 }
 body {
-  // display: flex;
-  // flex-direction: column;
   font-family: $font-family-default, $font-safe;
   height: 100vh;
 }
 footer {
+  margin-top: 33vh;
   color: $grey-color;
+}
+// active state shrinks footer when selector is chaged
+.footer--active {
+  margin-top: 5vh;
+  margin-bottom: 7vh;
 }
 h3 {
   margin-top: 4vh;
+  margin-bottom: 2vh;
 }
 
-//styling for stories added by .js
+//styling for stories added by api request in scripts.js
 li {
   a {
     text-decoration: none;
-    font-size: $font-family-default;
+    font-size: $font-size-default;
     color: $white;
     &:hover {
       p {
@@ -54,7 +58,7 @@ li {
     transition-duration: 0.5s;
   }
 }
-#selector {
+.selector {
   margin-top: 2vh;
   margin-bottom: 10vh;
 }
@@ -70,21 +74,20 @@ li {
 .black-bg {
   background-color: $black;
 }
-.centered {
+.alignment {
   text-align: center;
 }
-.upperCase {
+.uppercase {
   text-transform: uppercase;
 }
-.bottom {
-  margin-top: 22vh;
-  color: $grey-color;
-  margin-bottom: 18vh;
+
+.loading {
+  text-align: center;
 }
 
 // for tablets over 600px wide
 @media screen and(min-width: 600px) {
-  ul {
+  ul.stories {
     columns: 3;
     column-gap: 0;
   }
@@ -96,17 +99,16 @@ li {
     display: inline-block;
   }
   h3 {
-    margin-top: 2vh;
+    margin-top: auto;
   }
   li p {
     font-size: 1rem;
   }
-  #selector {
-    margin-top: 2vh;
-    margin-bottom: auto;
-  }
+
   .logo {
     margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 3rem;
   }
   .logoSelect {
     flex-direction: row;
@@ -114,10 +116,11 @@ li {
     align-items: center;
     justify-content: center;
   }
-  .centered {
+  .alignment {
     text-align: left;
   }
 
+  // shrinks header to top of page when selector is changed
   .header--active {
     transition-duration: 0.5s;
     background-color: black;
@@ -131,7 +134,7 @@ li {
 
   // for desktops over 1000px wide
   @media screen and(min-width: 1000px) {
-    ul {
+    ul.stories {
       columns: 4;
     }
 
@@ -140,13 +143,9 @@ li {
     }
 
     .header--active {
-      // background-color: red;
-      // .logoSelect {
-      //   transform: translate(-100%, -100%);
-      // }
+      .logo {
+        margin-left: -3rem;
+      }
     }
-    // .centered {
-    //   text-align: left;
-    // }
   }
 }

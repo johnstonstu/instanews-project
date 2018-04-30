@@ -10,24 +10,25 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="build/css/style.min.css">
+    <link rel="stylesheet" href="css/selectric.css">
 </head>
 
 <body class="black-bg">
 
-    <header class="logoSelect centered">
+    <header class="logoSelect alignment">
 
-
+        <!-- logo -->
         <section>
             <img class="logo" src="images/nyt-logo.svg" alt="NY Times Logo">
         </section>
 
-
-        <section class="select">
+        <!-- dropdown selector with catagories -->
+        <section>
 
             <h3>Choose a section:</h3>
 
             <!-- dropdown selector -->
-            <select id="selector" name="Options">
+            <select class="selector" name="Options">
                 <option value="#" selected>Sections ...</option>
                 <option value="home">Home</option>
                 <option value="opinion">Opinion</option>
@@ -59,9 +60,9 @@
         </section>
     </header>
 
-    <div class="centered">
+    <div class="alignment">
 
-        <!-- skeleton format for list of stories, populated with .js -->
+        <!-- skeleton format for list of stories, populated with .append method in sripts.js -->
         <ul class="stories">
             <li>
                 <a href="#">
@@ -81,8 +82,9 @@
 
     </div>
 
+    <!-- bottom of page with cupyright -->
     <footer>
-        <h1 class="upperCase bottom centered">© Copyright 2018 instanews</h1>
+        <h1 class="uppercase alignment">© Copyright 2018 instanews</h1>
     </footer>
 
 
@@ -91,6 +93,10 @@
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+
+    <!-- selectric -->
+    <script src="build/js/jquery.selectric.min.js"></script>
+
     <!-- my js files -->
     <script src="build/js/scripts.min.js"></script>
 </body>

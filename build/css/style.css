@@ -4,7 +4,7 @@
   outline: none; }
 
 html {
-  font-size: Open Sans;
+  font-size: 16px;
   color: #ffffff; }
 
 body {
@@ -12,14 +12,20 @@ body {
   height: 100vh; }
 
 footer {
+  margin-top: 33vh;
   color: #c2c2c2; }
 
+.footer--active {
+  margin-top: 5vh;
+  margin-bottom: 7vh; }
+
 h3 {
-  margin-top: 4vh; }
+  margin-top: 4vh;
+  margin-bottom: 2vh; }
 
 li a {
   text-decoration: none;
-  font-size: Open Sans;
+  font-size: 16px;
   color: #ffffff; }
   li a:hover p {
     opacity: 0.6; }
@@ -44,7 +50,7 @@ li p {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s; }
 
-#selector {
+.selector {
   margin-top: 2vh;
   margin-bottom: 10vh; }
 
@@ -64,19 +70,17 @@ li p {
 .black-bg {
   background-color: black; }
 
-.centered {
+.alignment {
   text-align: center; }
 
-.upperCase {
+.uppercase {
   text-transform: uppercase; }
 
-.bottom {
-  margin-top: 22vh;
-  color: #c2c2c2;
-  margin-bottom: 18vh; }
+.loading {
+  text-align: center; }
 
 @media screen and (min-width: 600px) {
-  ul {
+  ul.stories {
     -webkit-columns: 3;
             columns: 3;
     -webkit-column-gap: 0;
@@ -87,14 +91,13 @@ li p {
   section {
     display: inline-block; }
   h3 {
-    margin-top: 2vh; }
+    margin-top: auto; }
   li p {
     font-size: 1rem; }
-  #selector {
-    margin-top: 2vh;
-    margin-bottom: auto; }
   .logo {
-    margin-top: auto; }
+    margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 3rem; }
   .logoSelect {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -107,7 +110,7 @@ li p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .centered {
+  .alignment {
     text-align: left; }
   .header--active {
     -webkit-transition-duration: 0.5s;
@@ -121,10 +124,12 @@ li p {
               transform: scale(0.4); } }
 
 @media screen and (min-width: 600px) and (min-width: 1000px) {
-  ul {
+  ul.stories {
     -webkit-columns: 4;
             columns: 4; }
   .logoSelect {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
-            justify-content: left; } }
+            justify-content: left; }
+  .header--active .logo {
+    margin-left: -3rem; } }
