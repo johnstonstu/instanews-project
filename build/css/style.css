@@ -28,7 +28,8 @@ li a {
   font-size: 16px;
   color: #ffffff; }
   li a:hover p {
-    opacity: 0.6; }
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6); }
 
 li .imgBG {
   background-size: cover;
@@ -37,14 +38,15 @@ li .imgBG {
   display: flex;
   width: 100%;
   max-width: 600px;
-  height: 50vh; }
+  height: 420px;
+  background-position: 50%; }
 
 li p {
   text-decoration: none;
   max-width: 600px;
   text-align: center;
   font-size: 1.5rem;
-  background: black;
+  line-height: 1.5rem;
   opacity: 0;
   margin-top: auto;
   -webkit-transition-duration: 0.5s;
@@ -54,7 +56,7 @@ li p {
   margin-top: 2vh;
   margin-bottom: 10vh; }
 
-.logoSelect {
+.logo-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +81,9 @@ li p {
 .loading {
   text-align: center; }
 
+.header--active {
+  margin-bottom: 10vh; }
+
 @media screen and (min-width: 600px) {
   ul.stories {
     -webkit-columns: 3;
@@ -98,7 +103,7 @@ li p {
     margin-top: auto;
     margin-left: 2rem;
     margin-right: 3rem; }
-  .logoSelect {
+  .logo-select {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -113,21 +118,23 @@ li p {
   .alignment {
     text-align: left; }
   .header--active {
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
     background-color: black;
     width: auto;
     height: 17vh;
     margin: 0; }
     .header--active .logo {
-      -webkit-transform: scale(0.4);
-              transform: scale(0.4); } }
+      -webkit-transition-duration: 0.5s;
+              transition-duration: 0.5s;
+      -webkit-transform: scale(0.3);
+              transform: scale(0.3); } }
 
 @media screen and (min-width: 600px) and (min-width: 1000px) {
   ul.stories {
     -webkit-columns: 4;
             columns: 4; }
-  .logoSelect {
+  .logo-select {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left; }
