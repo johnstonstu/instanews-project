@@ -76,7 +76,8 @@ li p {
   text-transform: uppercase; }
 
 .loading {
-  text-align: center; }
+  text-align: center;
+  display: none; }
 
 .header--active {
   margin-bottom: 10vh; }

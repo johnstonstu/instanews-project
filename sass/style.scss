@@ -36,6 +36,7 @@ li {
     color: $white;
   }
   .imgBG {
+    // background images of stories, recieved from api response
     background-size: cover;
     display: flex;
     width: 100%;
@@ -48,7 +49,7 @@ li {
     max-width: $max-width;
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.5rem; //Increased size on mobile for better readibility
     line-height: 1.5rem;
     margin-top: auto;
     transition-duration: 0.5s;
@@ -79,6 +80,7 @@ li {
 
 .loading {
   text-align: center;
+  display: none;
 }
 
 .header--active {
@@ -140,6 +142,8 @@ li {
     ul.stories {
       columns: 4;
     }
+
+    // sets text to appear on hover, only for desktop because not compatible on touch screens
     li {
       a {
         &:hover {

@@ -12,10 +12,7 @@ $(function() {
     $(".stories").empty();
 
     //loading gif
-    $(".loading").empty();
-    $(".loading").append(
-      '<img alt="loader" src="../../images/ajax-loader.gif" width="100" height="100" align="center" />'
-    );
+    $(".loading").css("display", "block");
 
     // saves selected value from selector drop-down
     var selected = $(this).val();
@@ -68,7 +65,7 @@ $(function() {
           // throws error if theres less than 12 stories with pictures
         } else {
           alert("Not enough stories to display. Please try another catagory.");
-          $(".loading").empty();
+          $(".loading").css("display", "none");
         }
       }) // end of .done
 
@@ -80,7 +77,7 @@ $(function() {
 
       // removes loading gif when stories are done loading
       .always(function() {
-        $(".loading").empty();
+        $(".loading").css("display", "none");
       });
   }); // end of .on "change" function
 });
