@@ -14,7 +14,7 @@ $(function() {
     //loading gif
     $(".loading").empty();
     $(".loading").append(
-      '<img alt="loader" src="/images/ajax-loader.gif" width="100" height="100" align="center" />'
+      '<img alt="loader" src="../../images/ajax-loader.gif" width="100" height="100" align="center" />'
     );
 
     // saves selected value from selector drop-down
