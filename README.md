@@ -22,7 +22,10 @@ http://redacademy.github.io/instanews/
 * Implimented an ESlint styleguide
 * Use of CSS animation
 
-### Major obsticles:
+### Major obstacles:
 
 * Filtering/ parsing of api response
 * Gulp compatibility with ES6
+
+### Install instructions
+```npm install```

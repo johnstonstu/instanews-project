@@ -6,8 +6,9 @@ var gulp = require("gulp"),
   sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
   cssnano = require("gulp-cssnano"),
-  babel = require("gulp-babel"),
   prettyError = require("gulp-prettyerror");
+
+const babel = require("gulp-babel");
 
 gulp.task("lint", function() {
   return gulp

@@ -18,7 +18,6 @@ $(function() {
     var selected = $(this).val();
 
     //api get requeset
-    // Built by LucyBot. www.lucybot.com
     var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json";
     url +=
       "?" +
@@ -55,7 +54,7 @@ $(function() {
             $(".stories").append(
               '<li> <a href="' +
                 storyURL +
-                '"> <div class="imgBG" style="background-image: url(' +
+                '" target="_blank"> <div class="imgBG" style="background-image: url(' +
                 imgURL +
                 ')"><p>' +
                 abs +

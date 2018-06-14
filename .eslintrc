@@ -12,6 +12,13 @@
     "no-unused-vars": 1,
     "quotes": [1, "double"]
   },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "globals": {
     "jQuery": false,
     "$": false
